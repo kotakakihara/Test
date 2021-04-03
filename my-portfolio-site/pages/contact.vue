@@ -1,0 +1,197 @@
+<template>    
+    <v-container class="contact">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <div class="contact__main">
+            <div class="contact-left">
+            <h2>CONTACT</h2>
+            <form class="contact-form">
+            <div class="single-row">
+                <input type="text" placeholder="First Name" class="form-in mr">
+                <input type="text" placeholder="Last Name" class="form-in ml" >
+            </div>
+            <div class="multiple-row">
+                <input type="email" placeholder="Email" class="form-in">
+                <textarea placeholder="Your Message" class="form-in"></textarea>
+                <input type="submit" id="submit"><label for="submit"><i class="fas fa-paper-plane"></i></label>
+            </div>
+            </form>
+        </div>
+        <div class="contact-right">
+            <h2>Informations</h2>
+            <div class="contact-info">
+            <p><i class="fas fa-phone-alt"></i> +977 9800000000 </p>
+            <p><i class="fas fa-envelope"></i> info@example.com </p>
+            <p><i class="fas fa-map-marker-alt"></i> Butwal, Nepal</p>
+            </div>
+
+            <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        </div>
+    </v-container>
+
+</template>
+
+<style lang="scss" scoped>
+.contact {
+  font-weight: bold;
+  &__main {
+    margin: 10% 0;
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    padding: 32px;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow:  27px 27px 54px #b5b5b5, -27px -27px 54px #ffffff;
+  }
+  &__title {
+      border-bottom: 4px solid black;
+      width: 150px;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+*
+{
+margin: 0;
+padding:0;
+box-sizing: border-box;
+font-family: 'Montserrat', sans-serif;
+}
+body
+{
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+}
+/* Left side Design*/
+.contact-left
+{
+    width: 60%;
+    padding: 20px;
+    color: #52565e;
+}
+.contact-form
+{
+    margin-top: 10px;
+    width: 100%;
+}
+.single-row
+{
+    display: flex;
+    justify-content: space-between;
+}
+.form-in
+{
+    padding: 0.5em;
+    font-size: 14px;
+    width: 100%;
+    resize: vertical;
+    margin-top: 1em;
+    background: #eeeeee;
+    border: none;
+    box-shadow: inset 5px 5px 12px #e0e0e0, 
+            inset -5px -5px 12px #fcfcfc;
+            outline: none;
+    color: #52565e;
+}
+.single-row + input
+{
+margin: 0 10px;
+}
+.ml
+{
+    margin-left: 10px;
+}
+.mr
+{
+    margin-right: 10px;
+}
+
+.multiple-row
+{
+    position: relative;
+}
+#submit
+{
+    display: none;
+}
+#submit + label
+{
+    position: absolute;
+    font-size: 14px;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #3369e7;
+    border-radius: 100%;
+    color: #eeeeee;
+    box-shadow:  6px 6px 12px #bebebe, 
+             -6px -6px 12px #ffffff;
+    cursor: pointer;
+}
+
+#submit + label:hover
+{
+    box-shadow: inset 6px 6px 12px #2954b9, 
+            inset -6px -6px 12px #3d7eff;
+}
+/* Right side Design*/
+.contact-right
+{
+    padding: 20px;
+    width: 40%;
+    background: linear-gradient(#3369e798,#3369e798),url('https://images.unsplash.com/photo-1597773026935-df49538167e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    color: #eeeeee;
+}
+textarea
+{
+    min-height: 200px;
+}
+
+.contact-info,.social-links
+{
+font-size: 14px;
+margin-top: 40px;
+}
+.contact-info p
+{
+    margin-bottom: 20px;
+}
+.contact-info p  i
+{
+    margin-right: 20px;
+}
+
+.social-links a
+{
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #eeeeee;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+.social-links a:hover
+{
+margin-left: 10px;
+}
+
+
+@media only screen and (max-width: 770px)
+{
+    .contact-container
+    {
+        flex-direction: column;
+    }
+    .contact-right,.contact-left
+    {
+        width: 100%;
+    }
+}
+</style>
